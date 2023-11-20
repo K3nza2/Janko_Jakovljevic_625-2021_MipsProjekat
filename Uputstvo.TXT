@@ -1,0 +1,22 @@
+Potrebno je realizovati kolo za paljenje i gašenje LED diode.
+
+Port se bira tako što posmatramo broj samoglasnika tj. suglasnika u imenu i prezimenu,
+zatim u odnosu na broj istih biramo port A(ako ima više samoglasnika) ili port B(više suglasnika).
+
+Kako je moje ime i prezime Janko Jakovljević (6 samoglasnika i 9 suglasnika) biram port B.
+Zatim je potrebno odrediti odgovarajući pin.
+Pin se bira tako što se posmatra zbir slova u imenu i prezimenu po modulu 6.
+Kako moje ime i prezime zajedno sadrže 15 slova 15 % 6 = 3.
+Znači biramo pin B3.
+
+Zatim radimo PWM simulaciju.
+Radi se o dva takta, takva da su:
+Prvi takt)
+
+Širina impulsa jednaka broju slova u imenu pretvoren u ms (5ms).
+Širina pauze prvog takta je broj slova u prezimenu (10ms).
+
+Drugi takt)
+
+Isti postupak kao i za prvi takt sem što se širina impulsa i pauze zarotira.
+Dakle, širina impulsa je 10ms a širina pauze 5ms.
